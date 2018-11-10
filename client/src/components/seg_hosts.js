@@ -15,11 +15,11 @@ export default class HostsSeg extends Component {
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
-                    <Grid columns={2}>
+                    <Grid columns={3}>
                         <Grid.Row>
                             {this._getHeadShot("images/colin.jpg", "Colin Sheppard", "Asst. Reginal Manager, Developer")}
                             {this._getHeadShot("images/paul.png", "Paul Pham", "Chief Arcologist, Developer")}
-                            {/* {this._getHeadShot("images/bob.png", "Host", "Host desc")} */}
+                            {this._getHeadShot("images/melissa.jpg", "Melissa Nyomi", "Head House Manager")}
                         </Grid.Row>
                     </Grid>
                 </Segment>

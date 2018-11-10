@@ -43,12 +43,10 @@ export default class AmenitiesSeg extends Component {
                                 "Smoke detector",
                                 "First aid kit"])}
                             {this._getAmenities("Facilites", ["Free street parking"])}
-
                         </Grid.Row>
                     </Grid>
                 </Segment>
             </Element>
-
         )
     }
     _getAmenities(heading, items) {
