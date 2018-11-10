@@ -8,7 +8,7 @@ export default class AboutSeg extends Component {
             <div>
                 <br />
                 <Element name="about">
-                    <Segment textAlign='center' style={{ padding: '3em 5em 0em 5em' }} vertical>
+                    <Segment textAlign='center' style={{ padding: '4em 0em' }} vertical>
                         <Grid container verticalAlign='middle'>
                             <Grid.Row>
                                 <Grid.Column>
@@ -24,53 +24,38 @@ export default class AboutSeg extends Component {
                                 </Grid.Column>
                             </Grid.Row>
                             <Grid.Row >
-                                <Step.Group widths={4}>
-                                    <Step>
-                                        <Step.Content>
-                                            <Step.Title>Phase One</Step.Title>
-                                            <Step.Description>
-                                                (completed)
-                                                <p>15 June 2016 - 30 April 2018</p>
-                                                <p style={{ fontSize: '.75em' }}>Minimum liveable product in Bushwick, one year prototype. 2 bunks in a shared room, 1 private room. Workspace for two. Internet-controlled door buzzer.</p>
-                                            </Step.Description>
-                                        </Step.Content>
-                                    </Step>
-                                    <Step active>
-                                        <Step.Content>
-                                            <Step.Title>Phase Two</Step.Title>
-                                            <Step.Description>
-                                                (in progress)
-                                                <p>1 April 2018 - 30 April 2019</p>
-                                                <p style={{ fontSize: '.75em' }}>One year transitional space. 8 bunk beds, 3 private rooms. Three common workspaces. Door locks, rent payments, expenses, and future housemates governed by an Ethereum DAO. Rooftop garden and apiary.</p>
-                                            </Step.Description>
-                                        </Step.Content>
-                                    </Step>
-                                    <Step >
-                                        <Step.Content>
-                                            <Step.Title>Phase Three</Step.Title>
-                                            <Step.Description>
-                                                (imminent landship)
-                                                <p>1 December 2018 - indefinitely</p>
-                                                <p style={{ fontSize: '.75em' }}>L train closes. The DAO now owns a 4-story building. 10 bunks in shared rooms, 8 private rooms, 4 family apartments. Food co-op, coffeeshop, school, event space on ground floor. Equity and dividends in the arcology paid on Ethereum.</p>
-                                            </Step.Description>
-                                        </Step.Content>
-                                    </Step>
-                                    <Step >
-                                        <Step.Content>
-                                            <Step.Title>Phase Four</Step.Title>
-                                            <Step.Description>
-                                                (self-governance)
-                                            <p style={{ fontSize: '.75em' }}>Building achieves energy sustainability and self-governance, with a system for training the next generation of leaders.</p>
-                                            </Step.Description>
-                                        </Step.Content>
-                                    </Step>
-                                </Step.Group>
+                                <Grid.Column>
+                                    <Step.Group widths={4}>
+                                        {this._getStep('Phase One', "(completed)",
+                                            "15 June 2016 - 30 April 2018", "Minimum liveable product in Bushwick, one year prototype. 2 bunks in a shared room, 1 private room. Workspace for two. Internet-controlled door buzzer.", false)}
+                                        {this._getStep('Phase Two', " (in progress)",
+                                            "1 April 2018 - 30 April 2019", "One year transitional space. 8 bunk beds, 3 private rooms. Three common workspaces. Door locks, rent payments, expenses, and future housemates governed by an Ethereum DAO. Rooftop garden and apiary.", true)}
+                                        {this._getStep('Phase Three', "(imminent landship)",
+                                            "1 December 2018 - indefinitely", "L train closes. The DAO now owns a 4-story building. 10 bunks in shared rooms, 8 private rooms, 4 family apartments. Food co-op, coffeeshop, school, event space on ground floor. Equity and dividends in the arcology paid on Ethereum.", false)}
+                                        {this._getStep('Phase Four', "(self-governance)",
+                                            " ", "Building achieves energy sustainability and self-governance, with a system for training the next generation of leaders.", false)}
+                                    </Step.Group>
+                                </Grid.Column>
                             </Grid.Row>
-
                         </Grid>
                     </Segment>
                 </Element>
             </div>
+        )
+    }
+
+    _getStep(title, one, two, three, isActive) {
+        return (
+            <Step active={isActive}>
+                <Step.Content>
+                    <Step.Title>{title}</Step.Title>
+                    <Step.Description>
+                        {one}
+                        <p>{two}</p>
+                        <p style={{ fontSize: '.75em' }}>{three}</p>
+                    </Step.Description>
+                </Step.Content>
+            </Step>
         )
     }
 }

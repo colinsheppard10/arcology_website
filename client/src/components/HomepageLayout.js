@@ -103,10 +103,6 @@ class DesktopContainer extends Component {
                   <Menu.Item className="coltext" className="coltext" name='listings' as='a' active={activeItem === 'listings'} onClick={this.handleItemClick}>Listings</Menu.Item>
                 </Link>
 
-                {/* <Link to="amenities" spy={true} smooth={true} duration={500}>
-                  <Menu.Item className="coltext" name='amenities' as='a' active={activeItem === 'amenities'} onClick={this.handleItemClick}>Amenities</Menu.Item>
-                </Link> */}
-
                 <Link to="contact" spy={true} smooth={true} duration={500}>
                   <Menu.Item className="coltext" name='contact' as='a' active={activeItem === 'contact'} onClick={this.handleItemClick}>Contact</Menu.Item>
                 </Link>
@@ -163,10 +159,6 @@ class MobileContainer extends Component {
               <Menu.Item className="coltext" className="coltext" name='listings' as='a' active={activeItem === 'listings'} onClick={this.handleItemClick}>listings</Menu.Item>
             </Link>
 
-            {/* <Link to="amenities" spy={true} smooth={true} duration={500}>
-              <Menu.Item className="coltext" name='amenities' as='a' active={activeItem === 'amenities'} onClick={this.handleItemClick}>Amenities</Menu.Item>
-            </Link> */}
-
             <Link to="contact" spy={true} smooth={true} duration={500}>
               <Menu.Item className="coltext" name='contact' as='a' active={activeItem === 'contact'} onClick={this.handleItemClick}>Contact</Menu.Item>
             </Link>
@@ -182,7 +174,6 @@ class MobileContainer extends Component {
               </Container>
               <HomepageHeading mobile />
             </Segment>
-
             {children}
           </Sidebar.Pusher>
         </Sidebar.Pushable>
