@@ -5,6 +5,7 @@
 .ui.inverted.segment.colheading{
     background: url(https://images.unsplash.com/photo-1414058862086-136de6c98e99?dpr=1&auto=format&fit=crop&w=1080&h=721&q=80&cs=tinysrgb&crop=) no-repeat center center scroll;
     background-size: cover;
+    background-attachment:fixed; 
 }
 
 
